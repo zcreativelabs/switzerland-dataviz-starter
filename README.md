@@ -97,6 +97,12 @@ const projection = d3.geoMercator()
   .center([8.2,46.8])
 ```
 
+#### Path-generator
+
+```js
+d3.geoPath().projection(projection)
+```
+
 #### Coloring the map
 
 You can set the color depending on the data in the following way:
