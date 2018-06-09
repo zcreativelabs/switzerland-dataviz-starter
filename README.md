@@ -130,3 +130,15 @@ const zurich = svg.append("circle")
                   .attr("cy", zurichCoordinates[1])
                   .attr("r", 4)
 ```
+
+
+#### Console.log
+
+At any given point you can inspect variables, but using `console.log(VARNAME)`. The variable will appear in the console of your devTools in the browser.
+
+```js
+d3.json("ch.json")
+  .then(function(geoData) {
+    console.log(geoData)
+  })
+```
