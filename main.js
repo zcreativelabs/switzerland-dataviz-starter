@@ -1,21 +1,22 @@
 
 // Util for merging geojson data with csv data
 function mergeDatasets(geoData, csvData) {
-  return geoData.map(function(dataPoint) {
-    const cantonId = dataPoint.properties.id
+  const newFeatures = geoData.features.map(function(dataPoint) {
+    const cantonId = dataPoint.properties.HASC_1
     const csvDataPoint = csvData.find(function(d) {
       return d.code === cantonId
     })
-    dataPoint.properties.csvData = csvDataPoint
-    return dataPoint
+    return {
+      ...dataPoint,
+      properties: {
+        ...dataPoint.properties,
+        ...csvDataPoint,
+      },
+    }
   })
+  geoData.features = newFeatures
+  return geoData
 }
-
-// Util for creating a color scale
-const colorScale = d3.scaleLinear()
-  .domain([0,100])
-  .range(["#FFF","#000"])
-
 
 document.addEventListener("DOMContentLoaded", function() {
   // Make a map...

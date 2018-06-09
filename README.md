@@ -54,14 +54,21 @@ d3.csv("data.csv")
 
 ```js
 function mergeDatasets(geoData, csvData) {
-  return geoData.map(function(dataPoint) {
-    const cantonId = dataPoint.properties.id
+  const newFeatures = geoData.features.map(function(dataPoint) {
+    const cantonId = dataPoint.properties.HASC_1
     const csvDataPoint = csvData.find(function(d) {
       return d.code === cantonId
     })
-    dataPoint.properties.csvData = csvDataPoint
-    return dataPoint
+    return {
+      ...dataPoint,
+      properties: {
+        ...dataPoint.properties,
+        ...csvDataPoint,
+      },
+    }
   })
+  geoData.features = newFeatures
+  return geoData
 }
 ```
 
@@ -81,20 +88,45 @@ d3.json("ch.json")
   })
 ```
 
-#### Creating a color scale
-
-If you want to use a linear scale gradient showing the amount of the population who voted for or against an issue, you can use `d3.scaleLinear()`.
+#### Projection
 
 ```js
-const colorScale = d3.scaleLinear()
-  .domain([0,100])
-  .range(["#FFF","#000"])
+const projection = d3.geoMercator()
+  .translate([800/2,500/2])
+  .scale(8000)
+  .center([8.2,46.8])
 ```
 
-If you pass a number between `0` and `100` into the colorScale function, you will receive the corresponding color.
+#### Coloring the map
+
+You can set the color depending on the data in the following way:
 
 ```js
-colorScale(75) //
-colorScale(50) //
-colorScale(25) //
+const cantons = svg.selectAll(".canton")
+  .data(merged.features)
+  .enter()
+  .append("path")
+  .attr("d", d => path(d))
+  .attr("fill", d => {
+    if (+d.properties.ja > 50) {
+      return "#4CAF50"
+    }
+    else {
+      return "#FF5722"
+    }
+  })
+```
+
+#### Adding points
+
+To add points of interest to your map, you can use the projection function:
+
+```js
+// Zurich
+const zurichCoordinates = projection([8.5417,47.3769])
+
+const zurich = svg.append("circle")
+                  .attr("cx", zurichCoordinates[0])
+                  .attr("cy", zurichCoordinates[1])
+                  .attr("r", 4)
 ```
