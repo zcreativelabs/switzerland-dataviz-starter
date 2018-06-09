@@ -1,7 +1,7 @@
 
-# Making a referendum map of Switzerland
+# Making a map of Switzerland
 
-This boilerplate is a starting point for the workshop exercise on making a map of Switzerland showing referendum results.
+This boilerplate is a starting point for the workshop exercise on making a map of Switzerland.
 
 ## Getting started
 
@@ -26,7 +26,7 @@ $ python -m SimpleHTTPServer 3000
 
 To stop the server type `ctrl-c`. Once your server is running you can navigate to [`localhost:3000`](http://localhost:3000).
 
-Open the directory in atom and start coding :)
+Open the directory in atom/vscode and start coding :)
 
 ## Helpers
 
