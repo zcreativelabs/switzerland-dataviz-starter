@@ -19,9 +19,20 @@ body {
 
 svg {
   vertical-align: middle;
-  border: 1px solid #000;
+  border: 1px solid #EEE;
   width: 100%;
   height: auto;
+  margin: 2rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 .container {

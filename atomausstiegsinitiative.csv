@@ -1,0 +1,27 @@
+kanton,code,beteiligung,datum,name,ja,passed
+Zürich,CH.ZH,45.9,27.11.2016,Atomausstiegsinitiative,47.1,false
+Bern,CH.BE,43.5,27.11.2016,Atomausstiegsinitiative,44.1,false
+Luzern,CH.LU,44.3,27.11.2016,Atomausstiegsinitiative,39,false
+Uri,CH.UR,39.8,27.11.2016,Atomausstiegsinitiative,40.5,false
+Schwyz,CH.SZ,47.2,27.11.2016,Atomausstiegsinitiative,31.9,false
+Obwalden,CH.OW,49.9,27.11.2016,Atomausstiegsinitiative,35.1,false
+Nidwalden,CH.NW,49.3,27.11.2016,Atomausstiegsinitiative,35,false
+Glarus,CH.GL,38.6,27.11.2016,Atomausstiegsinitiative,38.5,false
+Zug,CH.ZG,51,27.11.2016,Atomausstiegsinitiative,37.9,false
+Fribourg,CH.FR,45.3,27.11.2016,Atomausstiegsinitiative,48.5,false
+Solothurn,CH.SO,45.1,27.11.2016,Atomausstiegsinitiative,39.5,false
+Basel-Stadt,CH.BS,52.9,27.11.2016,Atomausstiegsinitiative,60.5,true
+Basel-Landschaft,CH.BL,42.7,27.11.2016,Atomausstiegsinitiative,50.4,true
+Schaffhausen,CH.SH,63,27.11.2016,Atomausstiegsinitiative,46.9,false
+Appenzell Ausserrhoden,CH.AR,44.9,27.11.2016,Atomausstiegsinitiative,42.6,false
+Appenzell Innerrhoden,CH.AI,38.5,27.11.2016,Atomausstiegsinitiative,34.2,false
+St. Gallen,CH.SG,44,27.11.2016,Atomausstiegsinitiative,39.9,false
+Graubünden,CH.GR,43.6,27.11.2016,Atomausstiegsinitiative,44.1,false
+Aargau,CH.AG,43.7,27.11.2016,Atomausstiegsinitiative,37.1,false
+Thurgau,CH.TG,43.8,27.11.2016,Atomausstiegsinitiative,40.2,false
+Ticino,CH.TI,44.2,27.11.2016,Atomausstiegsinitiative,46.3,false
+Vaud,CH.VD,47.9,27.11.2016,Atomausstiegsinitiative,54.6,true
+Valais,CH.VS,48.3,27.11.2016,Atomausstiegsinitiative,46.7,false
+Neuchâtel,CH.NE,45.2,27.11.2016,Atomausstiegsinitiative,56.8,true
+Genève,CH.GE,45.4,27.11.2016,Atomausstiegsinitiative,59,true
+Jura,CH.JU,42.1,27.11.2016,Atomausstiegsinitiative,57.5,true
